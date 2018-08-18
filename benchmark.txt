@@ -1,0 +1,467 @@
+C:\Project\shines77\go-http-routing-benchmark>go test -bench=.
+
+DEBUG 04:59:31  revel  server.go:27: RegisterServerEngine: Registered engine   section=server name=go
+DEBUG 04:59:31  revel template_engine.go:45: Registered template engine loaded         section=template go=nil LOG15_ERROR="Normalized odd number of arguments by adding nil"
+
+#GithubAPI Routes: 203
+   Ace: 48992 Bytes
+   Bear: 157512 Bytes
+   Beego: 151144 Bytes
+   Bone: 100992 Bytes
+   Denco: 36456 Bytes
+   Echo: 96232 Bytes
+   Gin: 52592 Bytes
+   GocraftWeb: 95640 Bytes
+   Goji: 84040 Bytes
+   Gojiv2: 142344 Bytes
+   GoJsonRest: 134440 Bytes
+   GoRestful: 1241880 Bytes
+   GorillaMux: 1329200 Bytes
+   HttpRouter: 37464 Bytes
+   HttpTreeMux: 78800 Bytes
+   Kocha: 785264 Bytes
+   LARS: 49032 Bytes
+   Macaron: 131208 Bytes
+   Martini: 560272 Bytes
+   Pat: 21200 Bytes
+   Possum: 82960 Bytes
+   R2router: 47104 Bytes
+   Revel: 0 Bytes
+   Rivet: 42840 Bytes
+   Tango: 54776 Bytes
+   TigerTonic: 95504 Bytes
+   Traffic: 922048 Bytes
+   Vulcan: 463168 Bytes
+
+#GPlusAPI Routes: 13
+   Ace: 3600 Bytes
+   Bear: 7128 Bytes
+   Beego: 10272 Bytes
+   Bone: 6688 Bytes
+   Denco: 3272 Bytes
+   Echo: 9576 Bytes
+   Gin: 3968 Bytes
+   GocraftWeb: 7496 Bytes
+   Goji: 2912 Bytes
+   Gojiv2: 7376 Bytes
+   GoJsonRest: 11416 Bytes
+   GoRestful: 74264 Bytes
+   GorillaMux: 66544 Bytes
+   HttpRouter: 2712 Bytes
+   HttpTreeMux: 7440 Bytes
+   Kocha: 128880 Bytes
+   LARS: 3640 Bytes
+   Macaron: 8656 Bytes
+   Martini: 23936 Bytes
+   Pat: 1856 Bytes
+   Possum: 7728 Bytes
+   R2router: 3928 Bytes
+   Revel: 0 Bytes
+   Rivet: 3064 Bytes
+   Tango: 5104 Bytes
+   TigerTonic: 9408 Bytes
+   Traffic: 46400 Bytes
+   Vulcan: 25512 Bytes
+
+#ParseAPI Routes: 26
+   Ace: 6592 Bytes
+   Bear: 12320 Bytes
+   Beego: 19376 Bytes
+   Bone: 11456 Bytes
+   Denco: 4200 Bytes
+   Echo: 11536 Bytes
+   Gin: 6912 Bytes
+   GocraftWeb: 12800 Bytes
+   Goji: 5232 Bytes
+   Gojiv2: 14464 Bytes
+   GoJsonRest: 14088 Bytes
+   GoRestful: 116280 Bytes
+   GorillaMux: 106632 Bytes
+   HttpRouter: 4976 Bytes
+   HttpTreeMux: 7848 Bytes
+   Kocha: 181712 Bytes
+   LARS: 6632 Bytes
+   Macaron: 13648 Bytes
+   Martini: 45952 Bytes
+   Pat: 2560 Bytes
+   Possum: 9200 Bytes
+   R2router: 7056 Bytes
+   Revel: 0 Bytes
+   Rivet: 5680 Bytes
+   Tango: 8856 Bytes
+   TigerTonic: 9840 Bytes
+   Traffic: 79144 Bytes
+   Vulcan: 44728 Bytes
+
+#Static Routes: 157
+   HttpServeMux: 14464 Bytes
+   Ace: 30080 Bytes
+   Bear: 30888 Bytes
+   Beego: 98920 Bytes
+   Bone: 40432 Bytes
+   Denco: 9920 Bytes
+   Echo: 75488 Bytes
+   Gin: 30448 Bytes
+   GocraftWeb: 55928 Bytes
+   Goji: 27200 Bytes
+   Gojiv2: 104464 Bytes
+   GoJsonRest: 136792 Bytes
+   GoRestful: 768056 Bytes
+   GorillaMux: 591104 Bytes
+   HttpRouter: 21128 Bytes
+   HttpTreeMux: 73448 Bytes
+   Kocha: 115472 Bytes
+   LARS: 30120 Bytes
+   Macaron: 38592 Bytes
+   Martini: 310832 Bytes
+   Pat: 20464 Bytes
+   Possum: 89920 Bytes
+   R2router: 23728 Bytes
+   Revel: 0 Bytes
+   Rivet: 23880 Bytes
+   Tango: 28200 Bytes
+   TigerTonic: 80784 Bytes
+   Traffic: 539456 Bytes
+   Vulcan: 369896 Bytes
+
+goos: windows
+goarch: amd64
+
+BenchmarkAce_Param                      10000000               241 ns/op              32 B/op          1 allocs/op
+BenchmarkBear_Param                      2000000               896 ns/op             456 B/op          5 allocs/op
+BenchmarkBeego_Param                     1000000              1499 ns/op             416 B/op          7 allocs/op
+BenchmarkBone_Param                      1000000              1613 ns/op             816 B/op          6 allocs/op
+BenchmarkDenco_Param                    10000000               145 ns/op              32 B/op          1 allocs/op
+BenchmarkEcho_Param                     20000000                89.2 ns/op             0 B/op          0 allocs/op
+BenchmarkGin_Param                      20000000                72.0 ns/op             0 B/op          0 allocs/op
+BenchmarkGocraftWeb_Param                1000000              1443 ns/op             648 B/op          8 allocs/op
+BenchmarkGoji_Param                      2000000               714 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_Param                     500000              2496 ns/op            1328 B/op         11 allocs/op
+BenchmarkGoJsonRest_Param                1000000              1490 ns/op             649 B/op         13 allocs/op
+BenchmarkGoRestful_Param                  200000              6121 ns/op            2792 B/op         22 allocs/op
+BenchmarkGorillaMux_Param                 500000              2974 ns/op            1280 B/op         10 allocs/op
+BenchmarkHttpRouter_Param               20000000               105 ns/op              32 B/op          1 allocs/op
+BenchmarkHttpTreeMux_Param               2000000               614 ns/op             352 B/op          3 allocs/op
+BenchmarkKocha_Param                     5000000               268 ns/op              56 B/op          3 allocs/op
+BenchmarkLARS_Param                     20000000                74.2 ns/op             0 B/op          0 allocs/op
+BenchmarkMacaron_Param                    500000              2720 ns/op            1072 B/op         10 allocs/op
+BenchmarkMartini_Param                    300000              5540 ns/op            1072 B/op         10 allocs/op
+BenchmarkPat_Param                       1000000              2437 ns/op             648 B/op         12 allocs/op
+BenchmarkPossum_Param                    1000000              1608 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_Param                  2000000               796 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_Param                    2000000000               0.00 ns/op
+BenchmarkRivet_Param                    10000000               200 ns/op              48 B/op          1 allocs/op
+BenchmarkTango_Param                     1000000              1098 ns/op             248 B/op          8 allocs/op
+BenchmarkTigerTonic_Param                1000000              2737 ns/op             992 B/op         17 allocs/op
+BenchmarkTraffic_Param                    300000              4304 ns/op            1960 B/op         21 allocs/op
+BenchmarkVulcan_Param                    2000000               602 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_Param5                      3000000               514 ns/op             160 B/op          1 allocs/op
+BenchmarkBear_Param5                     1000000              1318 ns/op             501 B/op          5 allocs/op
+BenchmarkBeego_Param5                    1000000              1878 ns/op             480 B/op          7 allocs/op
+BenchmarkBone_Param5                     1000000              2077 ns/op             864 B/op          6 allocs/op
+BenchmarkDenco_Param5                    3000000               423 ns/op             160 B/op          1 allocs/op
+BenchmarkEcho_Param5                    10000000               211 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_Param5                     10000000               122 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_Param5                500000              2344 ns/op             920 B/op         11 allocs/op
+BenchmarkGoji_Param5                     1000000              1027 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_Param5                    500000              2782 ns/op            1392 B/op         11 allocs/op
+BenchmarkGoJsonRest_Param5                500000              3038 ns/op            1097 B/op         16 allocs/op
+BenchmarkGoRestful_Param5                 300000              6742 ns/op            2888 B/op         22 allocs/op
+BenchmarkGorillaMux_Param5                300000              4447 ns/op            1344 B/op         10 allocs/op
+BenchmarkHttpRouter_Param5               5000000               316 ns/op             160 B/op          1 allocs/op
+BenchmarkHttpTreeMux_Param5              1000000              1591 ns/op             576 B/op          6 allocs/op
+BenchmarkKocha_Param5                    1000000              1274 ns/op             440 B/op         10 allocs/op
+BenchmarkLARS_Param5                    10000000               120 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_Param5                   500000              3372 ns/op            1072 B/op         10 allocs/op
+BenchmarkMartini_Param5                   200000              6271 ns/op            1232 B/op         11 allocs/op
+BenchmarkPat_Param5                       500000              4007 ns/op             964 B/op         32 allocs/op
+BenchmarkPossum_Param5                   1000000              1420 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_Param5                 2000000               909 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_Param5                   2000000000               0.00 ns/op
+BenchmarkRivet_Param5                    3000000               553 ns/op             240 B/op          1 allocs/op
+BenchmarkTango_Param5                    1000000              1388 ns/op             360 B/op          8 allocs/op
+BenchmarkTigerTonic_Param5                200000              8765 ns/op            2551 B/op         43 allocs/op
+BenchmarkTraffic_Param5                   200000              6746 ns/op            2248 B/op         25 allocs/op
+BenchmarkVulcan_Param5                   2000000               789 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_Param20                     1000000              1310 ns/op             640 B/op          1 allocs/op
+BenchmarkBear_Param20                     300000              4011 ns/op            1665 B/op          5 allocs/op
+BenchmarkBeego_Param20                    300000              3951 ns/op             544 B/op          7 allocs/op
+BenchmarkBone_Param20                     300000              5193 ns/op            2031 B/op          6 allocs/op
+BenchmarkDenco_Param20                   1000000              1395 ns/op             640 B/op          1 allocs/op
+BenchmarkEcho_Param20                    2000000               604 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_Param20                     5000000               306 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_Param20               200000              8410 ns/op            3796 B/op         15 allocs/op
+BenchmarkGoji_Param20                     500000              2906 ns/op            1247 B/op          2 allocs/op
+BenchmarkGojiv2_Param20                   500000              3326 ns/op            1632 B/op         11 allocs/op
+BenchmarkGoJsonRest_Param20               200000             11018 ns/op            4485 B/op         20 allocs/op
+BenchmarkGoRestful_Param20                100000             12572 ns/op            5315 B/op         26 allocs/op
+BenchmarkGorillaMux_Param20               200000              9939 ns/op            3451 B/op         12 allocs/op
+BenchmarkHttpRouter_Param20              1000000              1098 ns/op             640 B/op          1 allocs/op
+BenchmarkHttpTreeMux_Param20              200000              7210 ns/op            3195 B/op         10 allocs/op
+BenchmarkKocha_Param20                    300000              3977 ns/op            1808 B/op         27 allocs/op
+BenchmarkLARS_Param20                    5000000               299 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_Param20                  200000              7860 ns/op            2924 B/op         12 allocs/op
+BenchmarkMartini_Param20                  200000             11858 ns/op            3596 B/op         13 allocs/op
+BenchmarkPat_Param20                      100000             19139 ns/op            4687 B/op        111 allocs/op
+BenchmarkPossum_Param20                  1000000              1442 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_Param20                 300000              4943 ns/op            2284 B/op          7 allocs/op
+BenchmarkRevel_Param20                  2000000000               0.00 ns/op
+BenchmarkRivet_Param20                   1000000              1987 ns/op            1024 B/op          1 allocs/op
+BenchmarkTango_Param20                    500000              2584 ns/op             856 B/op          8 allocs/op
+BenchmarkTigerTonic_Param20                50000             35759 ns/op           10534 B/op        138 allocs/op
+BenchmarkTraffic_Param20                  100000             24276 ns/op            7942 B/op         45 allocs/op
+BenchmarkVulcan_Param20                  1000000              1369 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_ParamWrite                  5000000               348 ns/op              40 B/op          2 allocs/op
+BenchmarkBear_ParamWrite                 2000000               935 ns/op             456 B/op          5 allocs/op
+BenchmarkBeego_ParamWrite                1000000              1627 ns/op             424 B/op          8 allocs/op
+BenchmarkBone_ParamWrite                 1000000              1637 ns/op             816 B/op          6 allocs/op
+BenchmarkDenco_ParamWrite               10000000               190 ns/op              32 B/op          1 allocs/op
+BenchmarkEcho_ParamWrite                10000000               189 ns/op               8 B/op          1 allocs/op
+BenchmarkGin_ParamWrite                 10000000               152 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_ParamWrite           1000000              1555 ns/op             656 B/op          9 allocs/op
+BenchmarkGoji_ParamWrite                 2000000               748 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_ParamWrite                500000              2634 ns/op            1360 B/op         13 allocs/op
+BenchmarkGoJsonRest_ParamWrite            500000              2396 ns/op            1128 B/op         18 allocs/op
+BenchmarkGoRestful_ParamWrite             200000              6161 ns/op            2800 B/op         23 allocs/op
+BenchmarkGorillaMux_ParamWrite            500000              3118 ns/op            1280 B/op         10 allocs/op
+BenchmarkHttpRouter_ParamWrite          10000000               152 ns/op              32 B/op          1 allocs/op
+BenchmarkHttpTreeMux_ParamWrite          2000000               662 ns/op             352 B/op          3 allocs/op
+BenchmarkKocha_ParamWrite                5000000               311 ns/op              56 B/op          3 allocs/op
+BenchmarkLARS_ParamWrite                10000000               139 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_ParamWrite               500000              3232 ns/op            1176 B/op         14 allocs/op
+BenchmarkMartini_ParamWrite               200000              5991 ns/op            1176 B/op         14 allocs/op
+BenchmarkPat_ParamWrite                  1000000              2517 ns/op            1072 B/op         17 allocs/op
+BenchmarkPossum_ParamWrite               1000000              1447 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_ParamWrite             2000000               845 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_ParamWrite               2000000000               0.00 ns/op
+BenchmarkRivet_ParamWrite                5000000               367 ns/op             112 B/op          2 allocs/op
+BenchmarkTango_ParamWrite                3000000               589 ns/op             136 B/op          4 allocs/op
+BenchmarkTigerTonic_ParamWrite            500000              3871 ns/op            1424 B/op         23 allocs/op
+BenchmarkTraffic_ParamWrite               300000              5113 ns/op            2384 B/op         25 allocs/op
+BenchmarkVulcan_ParamWrite               2000000               598 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GithubStatic               10000000               161 ns/op               0 B/op          0 allocs/op
+BenchmarkBear_GithubStatic               3000000               487 ns/op             120 B/op          3 allocs/op
+BenchmarkBeego_GithubStatic              1000000              1509 ns/op             416 B/op          7 allocs/op
+BenchmarkBone_GithubStatic                100000             14091 ns/op            2880 B/op         60 allocs/op
+BenchmarkDenco_GithubStatic             30000000                42.9 ns/op             0 B/op          0 allocs/op
+BenchmarkEcho_GithubStatic              20000000               113 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GithubStatic               20000000                92.6 ns/op             0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GithubStatic         2000000               924 ns/op             296 B/op          5 allocs/op
+BenchmarkGoji_GithubStatic              10000000               238 ns/op               0 B/op          0 allocs/op
+BenchmarkGojiv2_GithubStatic             1000000              2535 ns/op            1312 B/op         10 allocs/op
+BenchmarkGoRestful_GithubStatic           100000             16170 ns/op            4488 B/op         24 allocs/op
+BenchmarkGoJsonRest_GithubStatic         1000000              1126 ns/op             329 B/op         11 allocs/op
+BenchmarkGorillaMux_GithubStatic          100000             14671 ns/op             976 B/op          9 allocs/op
+BenchmarkHttpRouter_GithubStatic        30000000                49.5 ns/op             0 B/op          0 allocs/op
+BenchmarkHttpTreeMux_GithubStatic       20000000                68.1 ns/op             0 B/op          0 allocs/op
+BenchmarkKocha_GithubStatic             20000000                76.6 ns/op             0 B/op          0 allocs/op
+BenchmarkLARS_GithubStatic              20000000                94.0 ns/op             0 B/op          0 allocs/op
+BenchmarkMacaron_GithubStatic            1000000              2110 ns/op             736 B/op          8 allocs/op
+BenchmarkMartini_GithubStatic             100000             14391 ns/op             768 B/op          9 allocs/op
+BenchmarkPat_GithubStatic                 100000             12272 ns/op            3648 B/op         76 allocs/op
+BenchmarkPossum_GithubStatic             1000000              1087 ns/op             416 B/op          3 allocs/op
+BenchmarkR2router_GithubStatic           3000000               396 ns/op             144 B/op          4 allocs/op
+BenchmarkRevel_GithubStatic             2000000000               0.00 ns/op
+BenchmarkRivet_GithubStatic             20000000               115 ns/op               0 B/op          0 allocs/op
+BenchmarkTango_GithubStatic              1000000              1266 ns/op             248 B/op          8 allocs/op
+BenchmarkTigerTonic_GithubStatic         5000000               275 ns/op              48 B/op          1 allocs/op
+BenchmarkTraffic_GithubStatic              50000             32421 ns/op           18904 B/op        148 allocs/op
+BenchmarkVulcan_GithubStatic             2000000               877 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GithubParam                 5000000               393 ns/op              96 B/op          1 allocs/op
+BenchmarkBear_GithubParam                1000000              1135 ns/op             496 B/op          5 allocs/op
+BenchmarkBeego_GithubParam               1000000              1770 ns/op             544 B/op          7 allocs/op
+BenchmarkBone_GithubParam                 200000              7860 ns/op            1888 B/op         19 allocs/op
+BenchmarkDenco_GithubParam               5000000               353 ns/op             128 B/op          1 allocs/op
+BenchmarkEcho_GithubParam               10000000               218 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GithubParam                10000000               146 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GithubParam          1000000              1679 ns/op             712 B/op          9 allocs/op
+BenchmarkGoji_GithubParam                1000000              1016 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_GithubParam               500000              2908 ns/op            1408 B/op         13 allocs/op
+BenchmarkGoJsonRest_GithubParam          1000000              2032 ns/op             713 B/op         14 allocs/op
+BenchmarkGoRestful_GithubParam            100000             16810 ns/op            2952 B/op         24 allocs/op
+BenchmarkGorillaMux_GithubParam           200000             10698 ns/op            1296 B/op         10 allocs/op
+BenchmarkHttpRouter_GithubParam          5000000               292 ns/op              96 B/op          1 allocs/op
+BenchmarkHttpTreeMux_GithubParam         2000000               957 ns/op             384 B/op          4 allocs/op
+BenchmarkKocha_GithubParam               3000000               584 ns/op             128 B/op          5 allocs/op
+BenchmarkLARS_GithubParam               10000000               146 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_GithubParam             1000000              3203 ns/op            1072 B/op         10 allocs/op
+BenchmarkMartini_GithubParam              200000             12033 ns/op            1152 B/op         11 allocs/op
+BenchmarkPat_GithubParam                  200000             10354 ns/op            2464 B/op         48 allocs/op
+BenchmarkPossum_GithubParam              1000000              1366 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_GithubParam            2000000               805 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_GithubParam              2000000000               0.00 ns/op
+BenchmarkRivet_GithubParam               3000000               415 ns/op              96 B/op          1 allocs/op
+BenchmarkTango_GithubParam               1000000              1418 ns/op             344 B/op          8 allocs/op
+BenchmarkTigerTonic_GithubParam           500000              4359 ns/op            1440 B/op         24 allocs/op
+BenchmarkTraffic_GithubParam              100000             14911 ns/op            5992 B/op         52 allocs/op
+BenchmarkVulcan_GithubParam              1000000              1372 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GithubAll                     20000             72908 ns/op           13792 B/op        167 allocs/op
+BenchmarkBear_GithubAll                    10000            235965 ns/op           86448 B/op        943 allocs/op
+BenchmarkBeego_GithubAll                    5000            333010 ns/op           88065 B/op       1133 allocs/op
+BenchmarkBone_GithubAll                      500           3084275 ns/op          720160 B/op       8620 allocs/op
+BenchmarkDenco_GithubAll                   20000             67711 ns/op           20224 B/op        167 allocs/op
+BenchmarkEcho_GithubAll                    30000             42642 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GithubAll                     50000             29343 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GithubAll               5000            345603 ns/op          131656 B/op       1686 allocs/op
+BenchmarkGoji_GithubAll                     3000            448411 ns/op           56112 B/op        334 allocs/op
+BenchmarkGojiv2_GithubAll                   2000            891491 ns/op          352720 B/op       4321 allocs/op
+BenchmarkGoJsonRest_GithubAll               3000            399439 ns/op          134371 B/op       2737 allocs/op
+BenchmarkGoRestful_GithubAll                 500           3492009 ns/op          937272 B/op       5000 allocs/op
+BenchmarkGorillaMux_GithubAll                300           5676767 ns/op          251648 B/op       1994 allocs/op
+BenchmarkHttpRouter_GithubAll              30000             45906 ns/op           13792 B/op        167 allocs/op
+BenchmarkHttpTreeMux_GithubAll             10000            165004 ns/op           65856 B/op        671 allocs/op
+BenchmarkKocha_GithubAll                   10000            117633 ns/op           23304 B/op        843 allocs/op
+BenchmarkLARS_GithubAll                    50000             28203 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_GithubAll                  3000            401105 ns/op          149409 B/op       1624 allocs/op
+BenchmarkMartini_GithubAll                   300           4723968 ns/op          226548 B/op       2325 allocs/op
+BenchmarkPat_GithubAll                       300           4457415 ns/op         1499568 B/op      27435 allocs/op
+BenchmarkPossum_GithubAll                  10000            192988 ns/op           84448 B/op        609 allocs/op
+BenchmarkR2router_GithubAll                10000            160108 ns/op           77328 B/op        979 allocs/op
+BenchmarkRevel_GithubAll                2000000000               0.00 ns/op
+BenchmarkRivet_GithubAll                   20000             76755 ns/op           16272 B/op        167 allocs/op
+BenchmarkTango_GithubAll                    5000            276438 ns/op           63826 B/op       1618 allocs/op
+BenchmarkTigerTonic_GithubAll               2000            768561 ns/op          239104 B/op       5374 allocs/op
+BenchmarkTraffic_GithubAll                   200           6071541 ns/op         2659329 B/op      21848 allocs/op
+BenchmarkVulcan_GithubAll                  10000            218975 ns/op           19894 B/op        609 allocs/op
+
+BenchmarkAce_GPlusStatic                10000000               139 ns/op               0 B/op          0 allocs/op
+BenchmarkBear_GPlusStatic                5000000               338 ns/op             104 B/op          3 allocs/op
+BenchmarkBeego_GPlusStatic               1000000              1214 ns/op             384 B/op          7 allocs/op
+BenchmarkBone_GPlusStatic               10000000               190 ns/op              32 B/op          1 allocs/op
+BenchmarkDenco_GPlusStatic              50000000                28.7 ns/op             0 B/op          0 allocs/op
+BenchmarkEcho_GPlusStatic               20000000                83.2 ns/op             0 B/op          0 allocs/op
+BenchmarkGin_GPlusStatic                20000000                72.4 ns/op             0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GPlusStatic          2000000               711 ns/op             280 B/op          5 allocs/op
+BenchmarkGoji_GPlusStatic               10000000               171 ns/op               0 B/op          0 allocs/op
+BenchmarkGojiv2_GPlusStatic              1000000              2007 ns/op            1312 B/op         10 allocs/op
+BenchmarkGoJsonRest_GPlusStatic          2000000               855 ns/op             329 B/op         11 allocs/op
+BenchmarkGoRestful_GPlusStatic            300000              5133 ns/op            2472 B/op         21 allocs/op
+BenchmarkGorillaMux_GPlusStatic          1000000              1908 ns/op             976 B/op          9 allocs/op
+BenchmarkHttpRouter_GPlusStatic         50000000                31.6 ns/op             0 B/op          0 allocs/op
+BenchmarkHttpTreeMux_GPlusStatic        30000000                43.3 ns/op             0 B/op          0 allocs/op
+BenchmarkKocha_GPlusStatic              30000000                50.5 ns/op             0 B/op          0 allocs/op
+BenchmarkLARS_GPlusStatic               20000000                75.1 ns/op             0 B/op          0 allocs/op
+BenchmarkMacaron_GPlusStatic             1000000              1816 ns/op             736 B/op          8 allocs/op
+BenchmarkMartini_GPlusStatic              300000              4450 ns/op             768 B/op          9 allocs/op
+BenchmarkPat_GPlusStatic                 5000000               280 ns/op              96 B/op          2 allocs/op
+BenchmarkPossum_GPlusStatic              2000000               872 ns/op             416 B/op          3 allocs/op
+BenchmarkR2router_GPlusStatic            5000000               349 ns/op             144 B/op          4 allocs/op
+BenchmarkRevel_GPlusStatic              2000000000               0.00 ns/op
+BenchmarkRivet_GPlusStatic              20000000                67.1 ns/op             0 B/op          0 allocs/op
+BenchmarkTango_GPlusStatic               2000000               886 ns/op             200 B/op          8 allocs/op
+BenchmarkTigerTonic_GPlusStatic         10000000               166 ns/op              32 B/op          1 allocs/op
+BenchmarkTraffic_GPlusStatic             1000000              2075 ns/op            1192 B/op         15 allocs/op
+BenchmarkVulcan_GPlusStatic              3000000               530 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GPlusParam                  5000000               306 ns/op              64 B/op          1 allocs/op
+BenchmarkBear_GPlusParam                 2000000               862 ns/op             480 B/op          5 allocs/op
+BenchmarkBeego_GPlusParam                1000000              1444 ns/op             480 B/op          7 allocs/op
+BenchmarkBone_GPlusParam                 1000000              1520 ns/op             816 B/op          6 allocs/op
+BenchmarkDenco_GPlusParam               10000000               212 ns/op              64 B/op          1 allocs/op
+BenchmarkEcho_GPlusParam                10000000               125 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GPlusParam                 20000000                94.6 ns/op             0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GPlusParam           1000000              1269 ns/op             648 B/op          8 allocs/op
+BenchmarkGoji_GPlusParam                 2000000               694 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_GPlusParam               1000000              2234 ns/op            1328 B/op         11 allocs/op
+BenchmarkGoJsonRest_GPlusParam           1000000              1435 ns/op             649 B/op         13 allocs/op
+BenchmarkGoRestful_GPlusParam             300000              5866 ns/op            2792 B/op         22 allocs/op
+BenchmarkGorillaMux_GPlusParam            500000              3559 ns/op            1280 B/op         10 allocs/op
+BenchmarkHttpRouter_GPlusParam          10000000               164 ns/op              64 B/op          1 allocs/op
+BenchmarkHttpTreeMux_GPlusParam          3000000               608 ns/op             352 B/op          3 allocs/op
+BenchmarkKocha_GPlusParam                5000000               295 ns/op              56 B/op          3 allocs/op
+BenchmarkLARS_GPlusParam                20000000                96.5 ns/op             0 B/op          0 allocs/op
+BenchmarkMacaron_GPlusParam              1000000              2565 ns/op            1072 B/op         10 allocs/op
+BenchmarkMartini_GPlusParam               300000              5390 ns/op            1072 B/op         10 allocs/op
+BenchmarkPat_GPlusParam                  1000000              1786 ns/op             688 B/op         12 allocs/op
+BenchmarkPossum_GPlusParam               1000000              1204 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_GPlusParam             2000000               673 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_GPlusParam               2000000000               0.00 ns/op
+BenchmarkRivet_GPlusParam               10000000               203 ns/op              48 B/op          1 allocs/op
+BenchmarkTango_GPlusParam                1000000              1057 ns/op             264 B/op          8 allocs/op
+BenchmarkTigerTonic_GPlusParam           1000000              2666 ns/op            1056 B/op         17 allocs/op
+BenchmarkTraffic_GPlusParam               300000              4317 ns/op            1976 B/op         21 allocs/op
+BenchmarkVulcan_GPlusParam               2000000               743 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GPlus2Params                5000000               322 ns/op              64 B/op          1 allocs/op
+BenchmarkBear_GPlus2Params               1000000              1004 ns/op             496 B/op          5 allocs/op
+BenchmarkBeego_GPlus2Params              1000000              1741 ns/op             608 B/op          7 allocs/op
+BenchmarkBone_GPlus2Params                500000              3705 ns/op            1168 B/op         10 allocs/op
+BenchmarkDenco_GPlus2Params              5000000               263 ns/op              64 B/op          1 allocs/op
+BenchmarkEcho_GPlus2Params              10000000               186 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GPlus2Params               10000000               120 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GPlus2Params         1000000              1477 ns/op             712 B/op          9 allocs/op
+BenchmarkGoji_GPlus2Params               2000000               946 ns/op             336 B/op          2 allocs/op
+BenchmarkGojiv2_GPlus2Params             1000000              2809 ns/op            1408 B/op         14 allocs/op
+BenchmarkGoJsonRest_GPlus2Params         1000000              1893 ns/op             713 B/op         14 allocs/op
+BenchmarkGoRestful_GPlus2Params           300000              6176 ns/op            2984 B/op         24 allocs/op
+BenchmarkGorillaMux_GPlus2Params          200000              7465 ns/op            1296 B/op         10 allocs/op
+BenchmarkHttpRouter_GPlus2Params        10000000               191 ns/op              64 B/op          1 allocs/op
+BenchmarkHttpTreeMux_GPlus2Params        2000000               843 ns/op             384 B/op          4 allocs/op
+BenchmarkKocha_GPlus2Params              3000000               546 ns/op             128 B/op          5 allocs/op
+BenchmarkLARS_GPlus2Params              20000000               120 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_GPlus2Params            1000000              2876 ns/op            1072 B/op         10 allocs/op
+BenchmarkMartini_GPlus2Params             200000             11008 ns/op            1200 B/op         13 allocs/op
+BenchmarkPat_GPlus2Params                 200000              6706 ns/op            2256 B/op         34 allocs/op
+BenchmarkPossum_GPlus2Params             1000000              1230 ns/op             544 B/op          5 allocs/op
+BenchmarkR2router_GPlus2Params           2000000               753 ns/op             432 B/op          5 allocs/op
+BenchmarkRevel_GPlus2Params             2000000000               0.00 ns/op
+BenchmarkRivet_GPlus2Params              5000000               307 ns/op              96 B/op          1 allocs/op
+BenchmarkTango_GPlus2Params              1000000              1236 ns/op             344 B/op          8 allocs/op
+BenchmarkTigerTonic_GPlus2Params          500000              4145 ns/op            1488 B/op         24 allocs/op
+BenchmarkTraffic_GPlus2Params             200000              9854 ns/op            3272 B/op         31 allocs/op
+BenchmarkVulcan_GPlus2Params             1000000              1103 ns/op              98 B/op          3 allocs/op
+
+BenchmarkAce_GPlusAll                     500000              3713 ns/op             640 B/op         11 allocs/op
+BenchmarkBear_GPlusAll                    200000             11333 ns/op            5488 B/op         61 allocs/op
+BenchmarkBeego_GPlusAll                   100000             18599 ns/op            6016 B/op         83 allocs/op
+BenchmarkBone_GPlusAll                     50000             32021 ns/op           11744 B/op        109 allocs/op
+BenchmarkDenco_GPlusAll                  1000000              2873 ns/op             672 B/op         11 allocs/op
+BenchmarkEcho_GPlusAll                   1000000              1963 ns/op               0 B/op          0 allocs/op
+BenchmarkGin_GPlusAll                    1000000              1341 ns/op               0 B/op          0 allocs/op
+BenchmarkGocraftWeb_GPlusAll              100000             16940 ns/op            8040 B/op        103 allocs/op
+BenchmarkGoji_GPlusAll                    200000              9304 ns/op            3696 B/op         22 allocs/op
+BenchmarkGojiv2_GPlusAll                   50000             30782 ns/op           17616 B/op        154 allocs/op
+BenchmarkGoJsonRest_GPlusAll              100000             20788 ns/op            8117 B/op        170 allocs/op
+BenchmarkGoRestful_GPlusAll                20000             83253 ns/op           40584 B/op        302 allocs/op
+BenchmarkGorillaMux_GPlusAll               30000             55102 ns/op           16112 B/op        128 allocs/op
+BenchmarkHttpRouter_GPlusAll             1000000              1947 ns/op             640 B/op         11 allocs/op
+BenchmarkHttpTreeMux_GPlusAll             200000              8055 ns/op            4032 B/op         38 allocs/op
+BenchmarkKocha_GPlusAll                   300000              4773 ns/op             976 B/op         43 allocs/op
+BenchmarkLARS_GPlusAll                   1000000              1292 ns/op               0 B/op          0 allocs/op
+BenchmarkMacaron_GPlusAll                 100000             24885 ns/op            9568 B/op        104 allocs/op
+BenchmarkMartini_GPlusAll                  20000             85801 ns/op           14016 B/op        145 allocs/op
+BenchmarkPat_GPlusAll                      30000             48505 ns/op           16576 B/op        298 allocs/op
+BenchmarkPossum_GPlusAll                  200000             11923 ns/op            5408 B/op         39 allocs/op
+BenchmarkR2router_GPlusAll                200000              9054 ns/op            5040 B/op         63 allocs/op
+BenchmarkRevel_GPlusAll                 2000000000               0.00 ns/op
+BenchmarkRivet_GPlusAll                   500000              3074 ns/op             768 B/op         11 allocs/op
+BenchmarkTango_GPlusAll                   100000             14081 ns/op            3656 B/op        104 allocs/op
+BenchmarkTigerTonic_GPlusAll               30000             41442 ns/op           14512 B/op        288 allocs/op
+BenchmarkTraffic_GPlusAll                  20000             97094 ns/op           37360 B/op        392 allocs/op
+BenchmarkVulcan_GPlusAll                  100000             12063 ns/op            1274 B/op         39 allocs/op
+
+BenchmarkAce_ParseStatic                10000000               141 ns/op               0 B/op          0 allocs/op
+BenchmarkBear_ParseStatic                5000000               404 ns/op             120 B/op          3 allocs/op
+BenchmarkBeego_ParseStatic               1000000              1228 ns/op             384 B/op          7 allocs/op
+BenchmarkBone_ParseStatic                2000000               681 ns/op             144 B/op          3 allocs/op
+BenchmarkDenco_ParseStatic              50000000                33.9 ns/op             0 B/op          0 allocs/op
+BenchmarkEcho_ParseStatic               20000000                84.1 ns/op             0 B/op          0 allocs/op
+BenchmarkGin_ParseStatic                20000000                74.8 ns/op             0 B/op          0 allocs/op
+BenchmarkGocraftWeb_ParseStatic          2000000               772 ns/op             296 B/op          5 allocs/op
+BenchmarkGoji_ParseStatic               10000000               219 ns/op               0 B/op          0 allocs/op
+BenchmarkGojiv2_ParseStatic              1000000              1985 ns/op            1312 B/op         10 allocs/op
+BenchmarkGoJsonRest_ParseStatic          1000000              1046 ns/op             329 B/op         11 allocs/op
+BenchmarkGoRestful_ParseStatic            200000              8740 ns/op            4488 B/op         24 allocs/op
+BenchmarkGorillaMux_ParseStatic          1000000              2677 ns/op             976 B/op          9 allocs/op
+BenchmarkHttpRouter_ParseStatic         50000000                32.7 ns/op             0 B/op          0 allocs/op
+BenchmarkHttpTreeMux_ParseStatic        20000000                66.7 ns/op             0 B/op          0 allocs/op
+BenchmarkKocha_ParseStatic              *** Test killed: ran too long (10m0s).
+exit status 1
+
+FAIL    _/C_/Project/shines77/go-http-routing-benchmark 600.072s

@@ -235,10 +235,10 @@ func BenchmarkR2router_Param(b *testing.B) {
 }
 
 func BenchmarkRevel_Param(b *testing.B) {
-	router := loadRevelSingle("GET", "/user/:name", "RevelController.Handle")
+	//router := loadRevelSingle("GET", "/user/:name", "RevelController.Handle")
 
-	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-	benchRequest(b, router, r)
+	//r, _ := http.NewRequest("GET", "/user/gordon", nil)
+	//benchRequest(b, router, r)
 }
 func BenchmarkRivet_Param(b *testing.B) {
 	router := loadRivetSingle("GET", "/user/:name", rivetHandler)
@@ -421,10 +421,10 @@ func BenchmarkR2router_Param5(b *testing.B) {
 }
 
 func BenchmarkRevel_Param5(b *testing.B) {
-	router := loadRevelSingle("GET", fiveColon, "RevelController.Handle")
+	//router := loadRevelSingle("GET", fiveColon, "RevelController.Handle")
 
-	r, _ := http.NewRequest("GET", fiveRoute, nil)
-	benchRequest(b, router, r)
+	//r, _ := http.NewRequest("GET", fiveRoute, nil)
+	//benchRequest(b, router, r)
 }
 func BenchmarkRivet_Param5(b *testing.B) {
 	router := loadRivetSingle("GET", fiveColon, rivetHandler)
@@ -607,10 +607,10 @@ func BenchmarkR2router_Param20(b *testing.B) {
 }
 
 func BenchmarkRevel_Param20(b *testing.B) {
-	router := loadRevelSingle("GET", twentyColon, "RevelController.Handle")
+	//router := loadRevelSingle("GET", twentyColon, "RevelController.Handle")
 
-	r, _ := http.NewRequest("GET", twentyRoute, nil)
-	benchRequest(b, router, r)
+	//r, _ := http.NewRequest("GET", twentyRoute, nil)
+	//benchRequest(b, router, r)
 }
 func BenchmarkRivet_Param20(b *testing.B) {
 	router := loadRivetSingle("GET", twentyColon, rivetHandler)
@@ -789,10 +789,10 @@ func BenchmarkR2router_ParamWrite(b *testing.B) {
 }
 
 func BenchmarkRevel_ParamWrite(b *testing.B) {
-	router := loadRevelSingle("GET", "/user/:name", "RevelController.HandleWrite")
+	//router := loadRevelSingle("GET", "/user/:name", "RevelController.HandleWrite")
 
-	r, _ := http.NewRequest("GET", "/user/gordon", nil)
-	benchRequest(b, router, r)
+	//r, _ := http.NewRequest("GET", "/user/gordon", nil)
+	//benchRequest(b, router, r)
 }
 func BenchmarkRivet_ParamWrite(b *testing.B) {
 	router := loadRivetSingle("GET", "/user/:name", rivetHandlerWrite)

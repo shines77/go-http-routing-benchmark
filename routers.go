@@ -22,6 +22,7 @@ import (
 	"github.com/astaxie/beego/context"
 	"github.com/bmizerany/pat"
 	"github.com/go-playground/lars"
+
 	// "github.com/daryl/zeus"
 	"github.com/dimfeld/httptreemux"
 	"github.com/emicklei/go-restful"
@@ -45,8 +46,8 @@ import (
 	"github.com/pilu/traffic"
 	"github.com/plimble/ace"
 	"github.com/rcrowley/go-tigertonic"
+	"github.com/revel/pathtree"
 	"github.com/revel/revel"
-	"github.com/robfig/pathtree"
 	"github.com/typepress/rivet"
 	"github.com/ursiform/bear"
 	"github.com/vanng822/r2router"
@@ -93,7 +94,7 @@ func init() {
 	initBeego()
 	initGin()
 	initMartini()
-	initRevel()
+	//initRevel()
 	initTango()
 	initTraffic()
 }
@@ -345,7 +346,7 @@ func echoHandlerTest(c echo.Context) error {
 
 func loadEcho(routes []route) http.Handler {
 	var h echo.HandlerFunc = echoHandler
-	if loadTestHandler { 
+	if loadTestHandler {
 		h = echoHandlerTest
 	}
 
@@ -1148,7 +1149,7 @@ func (rc *RevelController) HandleWrite() revel.Result {
 }
 
 func (rc *RevelController) HandleTest() revel.Result {
-	return rc.RenderText(rc.Request.RequestURI)
+	return rc.RenderText(rc.Request.GetRequestURI())
 }
 
 type revelResult struct{}
@@ -1159,24 +1160,28 @@ func (rc *RevelController) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// Dirty hacks, do NOT copy!
 	revel.MainRouter = rc.router
 
-	upgrade := r.Header.Get("Upgrade")
+	context := revel.NewGoContext(nil)
+	context.Request.SetRequest(r)
+	context.Response.SetResponse(w)
+
+	c := revel.NewController(context)
+	req := c.Request
+	resp := c.Response
+
+	upgrade := req.Header.Get("Upgrade")
 	if upgrade == "websocket" || upgrade == "Websocket" {
 		panic("Not implemented")
 	} else {
-		var (
-			req  = revel.NewRequest(r)
-			resp = revel.NewResponse(w)
-			c    = revel.NewController(req, resp)
-		)
-		req.Websocket = nil
+		req.WebSocket = nil
 		revel.Filters[0](c, revel.Filters[1:])
 		if c.Result != nil {
 			c.Result.Apply(req, resp)
 		} else if c.Response.Status != 0 {
-			panic("Not implemented")
+			//panic("Not implemented")
+			c.Response.SetStatus(c.Response.Status)
 		}
 		// Close the Writer if we can
-		if w, ok := resp.Out.(io.Closer); ok {
+		if w, ok := resp.GetWriter().(io.Closer); ok {
 			w.Close()
 		}
 	}
@@ -1211,11 +1216,12 @@ func loadRevel(routes []route) http.Handler {
 	}
 
 	router := revel.NewRouter("")
+	appModule, _ := revel.ModuleByName("app")
 
 	// parseRoutes
 	var rs []*revel.Route
 	for _, r := range routes {
-		rs = append(rs, revel.NewRoute(r.method, r.path, h, "", "", 0))
+		rs = append(rs, revel.NewRoute(appModule, r.method, r.path, h, "", "", 0))
 	}
 	router.Routes = rs
 
@@ -1241,7 +1247,8 @@ func loadRevel(routes []route) http.Handler {
 func loadRevelSingle(method, path, action string) http.Handler {
 	router := revel.NewRouter("")
 
-	route := revel.NewRoute(method, path, action, "", "", 0)
+	appModule, _ := revel.ModuleByName("app")
+	route := revel.NewRoute(appModule, method, path, action, "", "", 0)
 	if err := router.Tree.Add(route.TreePath, route); err != nil {
 		panic(err)
 	}
