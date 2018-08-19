@@ -6,6 +6,7 @@ package main
 
 import (
 	"net/http"
+	"runtime"
 	"testing"
 )
 
@@ -204,6 +205,7 @@ var (
 )
 
 func init() {
+	runtime.GOMAXPROCS(1)
 	println("#Static Routes:", len(staticRoutes))
 
 	calcMem("HttpServeMux", func() {
@@ -280,9 +282,11 @@ func init() {
 	calcMem("R2router", func() {
 		staticR2router = loadR2router(staticRoutes)
 	})
-	calcMem("Revel", func() {
-		//staticRevel = loadRevel(staticRoutes)
-	})
+	/*
+		calcMem("Revel", func() {
+			staticRevel = loadRevel(staticRoutes)
+		})
+	*/
 	calcMem("Rivet", func() {
 		staticRivet = loadRivet(staticRoutes)
 	})
@@ -376,9 +380,12 @@ func BenchmarkPossum_StaticAll(b *testing.B) {
 func BenchmarkR2router_StaticAll(b *testing.B) {
 	benchRoutes(b, staticR2router, staticRoutes)
 }
+
+/*
 func BenchmarkRevel_StaticAll(b *testing.B) {
-	//benchRoutes(b, staticRevel, staticRoutes)
+	benchRoutes(b, staticRevel, staticRoutes)
 }
+*/
 func BenchmarkRivet_StaticAll(b *testing.B) {
 	benchRoutes(b, staticRivet, staticRoutes)
 }

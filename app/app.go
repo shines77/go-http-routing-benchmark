@@ -1,20 +1,20 @@
 package controllers
 
 import (
-	
-    "golang.org/x/crypto/bcrypt"
-	
-    "github.com/revel/revel"
-    
-	"github.com/revel/modules/orm/gorp/app/controllers"
+	"golang.org/x/crypto/bcrypt"
+
+	//"database/sql"
+	"fmt"
+
 	"github.com/revel/examples/booking/app/models"
 	"github.com/revel/examples/booking/app/routes"
-	"database/sql"
-	"fmt"
+	"github.com/revel/revel"
+	//"github.com/revel/modules/orm/gorp/app/controllers"
 )
 
 type Application struct {
-	gorpController.Controller
+	//gorpController.Controller
+	revel.Controller
 }
 
 func (c Application) AddUser() revel.Result {
@@ -36,15 +36,17 @@ func (c Application) connected() *models.User {
 
 func (c Application) getUser(username string) (user *models.User) {
 	user = &models.User{}
-	fmt.Println("get user",username,c.Txn)
+	fmt.Println("get user", username, c.Name)
 
-	err := c.Txn.SelectOne(user, c.Db.SqlStatementBuilder.Select("*").From("User").Where("Username=?",username))
-	if err != nil {
-		if err!=sql.ErrNoRows {
-			c.Log.Error("Failed to find user")
+	/*
+		err := c.Txn.SelectOne(user, c.Db.SqlStatementBuilder.Select("*").From("User").Where("Username=?", username))
+		if err != nil {
+			if err != sql.ErrNoRows {
+				c.Log.Error("Failed to find user")
+			}
+			return nil
 		}
-		return nil
-	}
+	*/
 	return
 }
 
@@ -74,10 +76,12 @@ func (c Application) SaveUser(user models.User, verifyPassword string) revel.Res
 
 	user.HashedPassword, _ = bcrypt.GenerateFromPassword(
 		[]byte(user.Password), bcrypt.DefaultCost)
-	err := c.Txn.Insert(&user)
-	if err != nil {
-		panic(err)
-	}
+	/*
+		err := c.Txn.Insert(&user)
+		if err != nil {
+			panic(err)
+		}
+	*/
 
 	c.Session["user"] = user.Username
 	c.Flash.Success("Welcome, " + user.Name)

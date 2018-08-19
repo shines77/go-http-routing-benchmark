@@ -1494,6 +1494,7 @@ func loadVulcanSingle(method, path string, handler http.HandlerFunc) http.Handle
 
 // Usage notice
 func main() {
+	runtime.GOMAXPROCS(1)
 	fmt.Println("Usage: go test -bench=. -timeout=20m")
 	os.Exit(1)
 }

@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"net/http/httptest"
+	"runtime"
 	"testing"
 )
 
@@ -56,6 +57,7 @@ var (
 )
 
 func TestRouters(t *testing.T) {
+	runtime.GOMAXPROCS(1)
 	loadTestHandler = true
 
 	for _, router := range routers {
